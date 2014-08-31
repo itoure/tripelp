@@ -11,7 +11,18 @@
 |
 */
 
-Route::get('/', function()
+/*Route::get('trip', function()
 {
-	return View::make('hello');
-});
+	return View::make('trip/index');
+});*/
+
+/*Route::get('users', function()
+{
+    $users = User::all();
+    return View::make('users')->with('users', $users);
+});*/
+
+Route::get('/', 'IndexController@getIndex');
+
+Route::get('trip/add', 'TripController@add');
+Route::get('trip/plan', 'TripController@plan');
